@@ -2,6 +2,7 @@ const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'White and Black Long Fur Cat',
+
   },
   {
     url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +13,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+ 
+const listEl = document.querySelector(".gallery");
+
+const item = images
+  .map((image) => `<li><img class="gallery-style" src="${image.url}" alt = "${image.alt}"</li>`)
+  .join("");
+
+listEl.insertAdjacentHTML("beforeend", item);
+console.log(listEl);
+
