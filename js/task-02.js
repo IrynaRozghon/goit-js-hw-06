@@ -14,6 +14,7 @@ ingredientsList.append(
   ...ingredients.map((item) => {
     let itemList = document.createElement("li");
     itemList.textContent = item;
+    itemList.classList.add("item");
     return itemList;
   })
 );
